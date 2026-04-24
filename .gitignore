@@ -8,8 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
-data/
-cache/
+cache/*
+data/*
 cli/lib/example.py
 .env
 app.log
