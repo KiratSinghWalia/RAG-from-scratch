@@ -53,3 +53,47 @@ def evaluate_results(query,documents):
        contents=prompt,
     )
     return response.text
+
+def RAG(query,documents,limit):
+    with open(prompts_path/'rag.md','r') as f:
+        prompt = f.read()
+    prompt = prompt.format(query=query,docs=documents,limit=limit)
+    model_name = model
+    response = client.models.generate_content(
+        model=model_name,
+       contents=prompt,
+    )
+    return response.text
+
+def summarize(query,documents):
+    with open(prompts_path/'summarize.md','r') as f:
+        prompt = f.read()
+    prompt = prompt.format(query=query,results=documents)
+    model_name = model
+    response = client.models.generate_content(
+        model=model_name,
+       contents=prompt,
+    )
+    return response.text
+
+def generate_citation(query,documents):
+    with open(prompts_path/'citations.md','r') as f:
+        prompt = f.read()
+    prompt = prompt.format(query=query,documents=documents)
+    model_name = model
+    response = client.models.generate_content(
+        model=model_name,
+       contents=prompt,
+    )
+    return response.text
+
+def question_answering(query,documents):
+    with open(prompts_path/'question.md','r') as f:
+        prompt = f.read()
+    prompt = prompt.format(question=query,context=documents)
+    model_name = model
+    response = client.models.generate_content(
+        model=model_name,
+       contents=prompt,
+    )
+    return response.text
