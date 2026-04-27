@@ -71,6 +71,15 @@ cache/
    # Edit .env and add your GEMINI_API_KEY
    ```
 
+4. **Data (data/movies.json)**
+```bash
+  https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/course-rag-movies.json
+   ```
+5. **stopwords (data/stopwords.txt)**
+```bash
+  https://gist.github.com/larsyencken/1440509
+   ```
+
 ## Usage
 
 ### Keyword Search
