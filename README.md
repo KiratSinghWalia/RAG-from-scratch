@@ -55,18 +55,15 @@ cache/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/KiratSinghWalia/RAG-from-scratch
    cd rag-search-engine
    ```
 
-2. **Install dependencies**
+2. **Install dependencies (uv needed)**
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
-   Or with Python 3.13+:
-   ```bash
-   pip install google-genai nltk numpy pillow python-dotenv sentence-transformers
-   ```
+   
 
 3. **Set up environment variables**
    ```bash
